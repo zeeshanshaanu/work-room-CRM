@@ -1,0 +1,8 @@
+.ForCenter {
+  position: absolute;
+  margin: 0%;
+  padding: 0%;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
