@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+// 
 import SignUpLogo from "../../assets/Images/auth/SignUpLogo.png";
-import "../../styles/Auth.css";
 import InputField from "../../components/common/InputField";
 import ViewpasswordIcon from "../../assets/Icons/RegistrationIcons/ViewpasswordIcon.svg";
 import RightWhiteArrow from "../../assets/Icons/RegistrationIcons/RightWhiteArrow.svg";
+import "../../styles/Auth.css";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [errors, setErrors] = useState({});
   const [ShowPass, setShowPass] = useState(false);
@@ -54,7 +57,7 @@ const Login = () => {
                     error={errors.password}
                     className=""
                   />
-                  <span className=" absolute right-[10px] top-[2.4rem] cursor-pointer ">
+                  <span className=" absolute right-[10px] top-[2.4rem] cursor-pointer">
                     <img
                       src={ViewpasswordIcon}
                       alt=""
@@ -82,7 +85,10 @@ const Login = () => {
                   </button>
                 </center>
               </form>
-              <div className="mt-5 text-center text-[#3F8CFF] text-[16px] font-semibold cursor-pointer">
+              <div
+                onClick={() => navigate("/sign-up")}
+                className="mt-5 text-center text-[#3F8CFF] text-[16px] font-semibold cursor-pointer"
+              >
                 Don’t have an account?
               </div>
             </div>
