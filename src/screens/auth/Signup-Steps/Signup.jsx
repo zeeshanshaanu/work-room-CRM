@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import WorkroomLogo from "../../../assets/Icons/WorkroomLogo.svg";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
+import Step3 from "./Setp3";
+import Step4 from "./Step4";
 // import Step3 from "./Step3";
 // import Step4 from "./Step4";
 
@@ -78,14 +80,14 @@ const Signup = () => {
               updateFormData={updateFormData}
             />
           )}
-          {/* {step === 3 && (
-      <Step3
-        nextStep={nextStep}
-        prevStep={prevStep}
-        updateFormData={updateFormData}
-      />
-    )}
-    {step === 4 && <Step4 prevStep={prevStep} formData={formData} />} */}
+          {step === 3 && (
+            <Step3
+              nextStep={nextStep}
+              prevStep={prevStep}
+              updateFormData={updateFormData}
+            />
+          )}
+          {step === 4 && <Step4 prevStep={prevStep} formData={formData} />}
         </div>
       </div>
     </div>

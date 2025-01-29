@@ -40,7 +40,7 @@ const Step1 = ({ nextStep, updateFormData }) => {
               country={"pk"}
               value={phone}
               onChange={(phone) => setPhone(phone)}
-              inputClass=" w-full !h-12 !text-gray-700 !border !border-[#D8E0F0] !rounded-[14px]"
+              inputClass="!w-[335px] !h-12 !text-gray-700 !border !border-[#D8E0F0] !rounded-[14px]"
             />
           </div>
 
